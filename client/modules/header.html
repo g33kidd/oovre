@@ -1,0 +1,33 @@
+<template name="header">
+    <div class="header">
+        <div class="flex-container">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="logo.png" alt="">
+                    <span>oovre</span>
+                </div>
+            </div>
+
+            <div class="section-left">
+                <ul class="nav-menu">
+                    <li><a href="#">Top</a></li>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">Drafts</a></li>
+                </ul>
+            </div>
+
+            <div class="section-right">
+                {{#if currentUser}}
+                <div class="user">
+                    <div class="profile">{{currentUser.name}}</div>
+                </div>
+                {{else}}
+                <div class="join">
+                    <button class="login" id="login">Login</button>
+                    <button class="signup" id="signup">Join</button>
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>

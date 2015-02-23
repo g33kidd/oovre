@@ -1,0 +1,90 @@
+.header {
+    height: 60px;
+    background-color: #2F2F2F;
+    
+    .logo-container {
+        position:absolute;
+        left:0;
+        right:0;
+        z-index:10;
+        .logo {
+            position:relative;
+            margin:0 auto;
+            padding:5px 0px;
+            cursor:pointer;
+            width:200px;
+            z-index:100;
+            img {
+                display:block;
+                float:left;
+                padding:5px 0px;
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+                -webkit-transition: all 350ms ease;
+                -o-transition: all 350ms ease;
+                transition: all 350ms ease;
+            }
+            span {
+                padding:15px 0px;
+                color:#fff;
+                display:block;
+                float:left;
+                font-size:28px;
+                text-transform: uppercase;
+                -webkit-transition: color 150ms ease;
+                -o-transition: color 150ms ease;
+                transition: color 150ms ease;
+            }
+            &:hover {
+                span { color:darken(#fff, 15%); }
+                img { transform: scale(1.2) rotate(360deg); }
+            }
+        }
+    }
+
+    .section-left {
+        float:left;
+        position:relative;
+        z-index:50;
+        .nav-menu {
+            list-style:none;
+            padding:0;
+            margin:0;
+            height:60px;
+            &:after {
+                display:block;
+                content: "";
+                clear:both;
+            }
+            li { 
+                padding:22px 2px;
+                float:left;
+                a {
+                    text-transform:uppercase;
+                    color:#fff;
+                    text-decoration:none;
+                    padding: 5px 10px;
+                    -webkit-transition: all 200ms ease;
+                    -o-transition: all 200ms ease;
+                    transition: all 200ms ease;
+                    &:hover {
+                        color: darken(#fff, 20%);
+                        border-bottom: 2px solid #2375E2;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-right {
+        z-index:50;
+        position:relative;
+        float:right;
+        .user {}
+        .join {
+            .login {}
+            .signup {}
+        }
+    }
+}

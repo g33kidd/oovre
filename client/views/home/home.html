@@ -1,0 +1,20 @@
+<template name="home">
+    <div class="flex-container">
+
+        <div class="recent-articles">
+            {{#each recentArticles}}
+                {{> homeArticleItem}}
+            {{/each}}
+        </div>
+
+    </div>
+</template>
+
+<template name="homeArticleItem">
+    <div class="article" style="background: url({{image}}) center center; background-size:cover;">
+        <div class="title">{{title}}</div>
+        <div class="meta">
+            Test
+        </div>
+    </div>
+</template>
